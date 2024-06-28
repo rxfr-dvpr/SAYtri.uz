@@ -11,6 +11,20 @@
             <router-link to="/" class="nav-logo">
                 <img :src="store.logo" alt="" class="nav-logo-img">
             </router-link>
+
+            <div class="nav-cltrs">
+                <button class="search-btn nav-cltrs-btn">
+                    <i class="far fa-search"></i>
+                </button>
+
+                <button class="sign-btn nav-cltrs-btn">
+                    <i class="far fa-user"></i>
+                </button>
+
+                <button class="cart-btn nav-cltrs-btn">
+                    <i class="fab fa-opencart"></i>
+                </button>
+            </div>
         </div>
     </div>
   </nav>
@@ -41,12 +55,17 @@ export default {
     }
 
     &-logo {
-        max-width: 120px;
+        max-width: 100px;
         width: 100%;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        order: -1;
 
         &-img {
             width: 100%;
             pointer-events: none;
+            display: block;
         }
     }
 
@@ -60,13 +79,36 @@ export default {
 
         &-link {
             font-size: 15px;
-            transition: .4s;
+            transition: .3s;
+            font-weight: 500;
 
             &::first-letter {
                 text-transform: uppercase;
             }
 
             &:hover {
+                color: var(--main-red);
+                font-style: italic;
+            }
+        }
+    }
+
+    &-cltrs {
+        max-width: max-content;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &-btn {
+            background: transparent;
+            border: 0;
+            font-size: 20px;
+            
+            i {
+                transition: .3s;
+            }
+
+            &:hover i {
                 color: var(--main-red);
             }
         }
