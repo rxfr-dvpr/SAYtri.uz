@@ -4,7 +4,11 @@
         <div class="row">
             <ul class="nav__list">
                 <li class="nav__list-item" v-for="(link, idx) in store.links" :key="idx">
-                    <router-link :to="link.url" class="nav__list-link">{{ link.name }}</router-link>
+                    <router-link :to="link.url" class="nav__list-logo" v-if="link.logo">
+                        <img :src="link.logo" alt="" class="nav__list-logo-img" >
+                    </router-link>
+
+                    <router-link :to="link.url" class="nav__list-link" v-else>{{ link.name }}</router-link>
                 </li>
             </ul>
 
@@ -52,25 +56,12 @@ export default {
 
     .row {
         justify-content: space-between;
-    }
-
-    &-logo {
-        max-width: 100px;
-        width: 100%;
-        display: block;
-        border-radius: 50%;
-        overflow: hidden;
-        order: -1;
-
-        &-img {
-            width: 100%;
-            pointer-events: none;
-            display: block;
-        }
+        gap: 15px;
+        flex-wrap: unset;
     }
 
     &__list {
-        max-width: 950px;
+        max-width: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -89,6 +80,21 @@ export default {
             &:hover {
                 color: var(--main-red);
                 font-style: italic;
+            }
+        }
+
+        &-logo {
+            max-width: 100px;
+            width: 100%;
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+            order: -1;
+
+            &-img {
+                width: 100%;
+                pointer-events: none;
+                display: block;
             }
         }
     }
