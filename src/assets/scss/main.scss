@@ -54,3 +54,44 @@ button {
     background: var(--main-black);
     border-radius: 10px;
 }
+
+.all-btn {
+    max-width: max-content;
+    width: 100%;
+    font-size: 18px;
+    padding: 18px 45px;
+    color: var(--main-blue);
+    border: solid 2px var(--main-blue);
+    background: transparent;
+    position: relative;
+    transition: .3s;
+    font-weight: 500;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: var(--main-blue);
+        transition: .7s;
+    }
+
+    &:hover {
+        color: var(--main-white);
+        
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.header-title {
+    span {
+        margin-left: auto;
+        font-weight: 500;
+    }
+}

@@ -1,21 +1,26 @@
 <template>
   <Nav/>
-  
-  <h1 class="main-title">SAYtri.uz Soon !</h1>
+    
+  <Header/>
 
   <main class="main">
     <Banner/>
   </main>
+
+  <h1 class="main-title">SAYtri.uz Soon !</h1>
+
 </template>
 
 <script>
 import Nav from '@/components/Nav.vue';
 import Banner from '@/components/Banner.vue';
+import Header from '@/components/Header.vue';
 
 export default {
   name: 'Home Page',
   components: {
     Nav,
+    Header,
     Banner
   }
 }
