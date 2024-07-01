@@ -55,6 +55,37 @@ export default {
             object-fit: cover;
         }
     }
+
+    .collection-title {
+        position: relative;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: .5s;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: var(--main-blue);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        &:hover {
+            color: var(--main-white) !important;
+            
+            &::before {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
 }
 
 </style>
