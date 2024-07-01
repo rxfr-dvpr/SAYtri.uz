@@ -95,3 +95,14 @@ button {
         font-weight: 500;
     }
 }
+
+.all-title {
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--main-blue);
+    
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
