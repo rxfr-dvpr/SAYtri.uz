@@ -7,6 +7,8 @@
     <Banner/>
 
     <Collection/>
+
+    <Contact/>
   </main>
 
   <h1 class="main-title">SAYtri.uz Soon !</h1>
@@ -18,6 +20,7 @@ import Nav from '@/components/Nav.vue';
 import Banner from '@/components/Banner.vue';
 import Header from '@/components/Header.vue';
 import Collection from '@/components/Collection.vue';
+import Contact from '@/components/Contact.vue';
 
 export default {
   name: 'Home Page',
@@ -25,7 +28,8 @@ export default {
     Nav,
     Header,
     Banner,
-    Collection
+    Collection,
+    Contact
   }
 }
 

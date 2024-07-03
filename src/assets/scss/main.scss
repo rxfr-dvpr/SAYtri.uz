@@ -87,6 +87,22 @@ button {
             width: 100%;
         }
     }
+
+    &.dark {
+        color: var(--main-white);
+
+        &::after {
+            width: 100%;
+        }
+
+        &:hover {
+            color: var(--main-blue);
+
+            &::after {
+                width: 0;
+            }
+        }
+    }
 }
 
 .header-title {
