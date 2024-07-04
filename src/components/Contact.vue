@@ -6,8 +6,8 @@
 
                 <h3 class="contact-title">{{ store.title }}</h3>
 
-                <form action="" class="contact__form">
-                    <input type="text" class="contact__form-inp" v-model="store.inp.val" 
+                <form action="" class="contact__form" @submit.prevent>
+                    <input type="email" class="contact__form-inp" v-model="store.inp.val" 
                     :placeholder="store.inp.plc">
 
                     <button class="contact__form-btn all-btn dark">{{ store.btnTxt }}</button>
@@ -71,7 +71,6 @@ export default {
             outline: none;
             font-size: 15px;
             font-weight: 500;
-            color: var(--main-red);
 
             &::placeholder {
                 font-size: 14px;

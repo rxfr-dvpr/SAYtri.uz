@@ -11,7 +11,7 @@
     <Contact/>
   </main>
 
-  <h1 class="main-title">SAYtri.uz Soon !</h1>
+  <Footer/>
 
 </template>
 
@@ -21,6 +21,7 @@ import Banner from '@/components/Banner.vue';
 import Header from '@/components/Header.vue';
 import Collection from '@/components/Collection.vue';
 import Contact from '@/components/Contact.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Home Page',
@@ -29,7 +30,8 @@ export default {
     Header,
     Banner,
     Collection,
-    Contact
+    Contact,
+    Footer
   }
 }
 
