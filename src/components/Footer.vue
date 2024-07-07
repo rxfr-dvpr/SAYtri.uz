@@ -4,12 +4,26 @@
         <div class="row">
 
             <div class="footer__socials">
-                <span class="footer__socials-name">{{ store.socials.name }}</span>
+                <span class="footer__socials-name all-ftr-name">{{ store.socials.name }}</span>
 
                 <div class="footer__socials-list">
                     <a :href="link.url" target="_blank" class="footer__socials-list-link" v-for="(link, idx) in store.socials.links" 
                     :key="idx" v-html="link.icon"></a>
                 </div>
+
+                <p class="copyright-txt">© Saytri.uz 2024</p>
+            </div>
+
+            <div class="footer__sellers">
+                <span class="footer__sellers-name all-ftr-name">{{ store.sellers.name }}</span>
+
+                <ul class="footer__sellers-list">
+                    <li class="footer__sellers-list-item"  v-for="(link, idx) in store.sellers.links" :key="idx">
+                        <router-link :to="link.url" class="footer__sellers-list-link">
+                            {{ link.name }}
+                        </router-link>
+                    </li>
+                </ul>
             </div>
 
             <router-link class="footer-logo" to="/">
@@ -56,17 +70,12 @@ export default {
         }
     }
 
-    .footer__socials {
+    &__socials {
         max-width: max-content;
         width: 100%;
         display: flex;
         flex-direction: column;
         row-gap: 30px;
-
-        &-name {
-            font-size: 20px;
-            color: var(--main-white);
-        }
 
         &-list {
             display: flex;
@@ -89,6 +98,44 @@ export default {
                 }
             }
         }
+
+        .copyright-txt {
+            margin-top: auto;
+            color: var(--main-white);
+            user-select: none;
+        }
+    }
+
+    &__sellers {
+        max-width: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            &-link {
+                font-size: 18px;
+                color: var(--main-white);
+                opacity: .3;
+                transition: .3s;
+
+                &:hover {
+                    color: var(--main-red);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .all-ftr-name {
+        font-size: 20px;
+        color: var(--main-white);
     }
 }
 

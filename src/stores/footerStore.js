@@ -15,6 +15,31 @@ export const footerStore = defineStore('Footer Store', {
                     url: 'https://t.me/saytri_uz'
                 }
             ]
+        },
+        sellers: {
+            name: 'Покупателям',
+            links: [
+                {
+                    name: 'Доставка и оплата',
+                    url: '/'
+                },
+                {
+                    name: 'Возврат',
+                    url: '/'
+                },
+                {
+                    name: 'О бренде',
+                    url: '/'
+                },
+                {
+                    name: 'Контакты',
+                    url: '/'
+                },
+                {
+                    name: 'Оптовикам',
+                    url: '/'
+                }
+            ]
         }
     })
 })
