@@ -26,6 +26,16 @@
                 </ul>
             </div>
 
+            <div class="footer__docs">
+                <span class="footer__docs-name all-ftr-name">{{ store.docs.name }}</span>
+
+                <ul class="footer__docs-list">
+                    <li class="footer__docs-list-item" v-for="link in store.docs.links" :key="link.id">
+                        <router-link :to="link.url" class="footer__docs-list-link">{{ link.name }}</router-link>
+                    </li>
+                </ul>
+            </div>
+
             <router-link class="footer-logo" to="/">
                 <img :src="store.logo" alt="" class="footer-logo-img">
             </router-link>
@@ -118,6 +128,32 @@ export default {
             display: flex;
             flex-direction: column;
             row-gap: 20px;
+
+            &-link {
+                font-size: 18px;
+                color: var(--main-white);
+                opacity: .3;
+                transition: .3s;
+
+                &:hover {
+                    color: var(--main-red);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__docs {
+        max-width: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 18px;
 
             &-link {
                 font-size: 18px;

@@ -40,6 +40,19 @@ export const footerStore = defineStore('Footer Store', {
                     url: '/'
                 }
             ]
+        },
+        docs: {
+            name: 'Документы',
+            links: [
+                {
+                    name: 'Политика конфиденциальности',
+                    url: '/'
+                },
+                {
+                    name: 'Оферта',
+                    url: '/'
+                }
+            ]
         }
     })
 })
