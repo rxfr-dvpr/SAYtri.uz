@@ -11,6 +11,13 @@
                     :key="idx" v-html="link.icon"></a>
                 </div>
 
+                <div class="footer-contacts">
+                    <a :href="link.link" target="_blank" class="footer-contacts-link" v-for="link in store.socials.contacts" :key="link.id">
+                        <span class="footer-contacts-icon" v-html="link.icon"></span>
+                        {{ link.name }}
+                    </a>
+                </div>
+
                 <p class="copyright-txt">© Saytri.uz 2024</p>
             </div>
 
@@ -113,6 +120,27 @@ export default {
             margin-top: auto;
             color: var(--main-white);
             user-select: none;
+        }
+
+        .footer-contacts {
+            max-width: max-content;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+
+            &-link {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                color: var(--main-white);
+                transition: .4s;
+                opacity: .5;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
 

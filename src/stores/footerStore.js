@@ -14,6 +14,18 @@ export const footerStore = defineStore('Footer Store', {
                     icon: '<i class="fab fa-telegram-plane"></i>',
                     url: 'https://t.me/saytri_uz'
                 }
+            ],
+            contacts: [
+                {
+                    icon: '<i class="fas fa-phone-alt"></i>',
+                    name: '+998 (00) 000 00 00',
+                    link: 'tel:+998000000000'
+                },
+                {
+                    icon: '<i class="fas fa-map-marker-alt"></i>',
+                    name: 'г. Ташкент',
+                    link: 'https://yandex.uz/maps/-/CDfhRNIU'
+                }
             ]
         },
         sellers: {
