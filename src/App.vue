@@ -1,11 +1,17 @@
 <template>
+  <Nav/>
+  
   <RouterView/>
 </template>
 
 <script>
+import Nav from './components/Nav.vue';
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Nav
+  }
 }
 
 </script>

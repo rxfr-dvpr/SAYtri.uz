@@ -1,6 +1,4 @@
 <template>
-  <Nav/>
-    
   <Header/>
 
   <main class="main">
@@ -16,7 +14,6 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue';
 import Banner from '@/components/Banner.vue';
 import Header from '@/components/Header.vue';
 import Collection from '@/components/Collection.vue';
@@ -26,7 +23,6 @@ import Footer from '@/components/Footer.vue';
 export default {
   name: 'Home Page',
   components: {
-    Nav,
     Header,
     Banner,
     Collection,

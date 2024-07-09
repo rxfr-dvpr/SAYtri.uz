@@ -77,7 +77,7 @@ export default {
                 text-transform: uppercase;
             }
 
-            &:hover {
+            &:hover, &.router-link-exact-active {
                 color: var(--main-red);
                 font-style: italic;
             }

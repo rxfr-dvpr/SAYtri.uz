@@ -5,15 +5,15 @@ export const navStore = defineStore('Nav Store', {
         links: [
             {
                 name: 'Каталог',
-                url: '/'
+                url: '/catalog'
             },
             {
                 name: 'Коллекции',
-                url: '/'
+                url: '/collection'
             },
             {
                 name: 'Линейки',
-                url: '/'
+                url: '/rulers'
             },
             {
                 logo: 'https://firebasestorage.googleapis.com/v0/b/saytri-affdd.appspot.com/o/sticker.webp?alt=media&token=ecc7081a-d83d-4223-ae99-80861da42f81',
@@ -21,15 +21,15 @@ export const navStore = defineStore('Nav Store', {
             },
             {
                 name: 'Украшения',
-                url: '/'
+                url: '/decorations'
             },
             {
                 name: 'Журнал',
-                url: '/'
+                url: '/journal'
             },
             {
                 name: 'Sale',
-                url: '/'
+                url: '/sale'
             }
         ],
     })
