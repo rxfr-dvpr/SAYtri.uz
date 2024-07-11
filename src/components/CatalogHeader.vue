@@ -2,10 +2,10 @@
   <header class="catalog__header">
     <div class="container">
         <div class="row">
-            <h2 class="catalog__header-title all-title">{{ store.title }}</h2>
+            <h2 class="catalog__header-title all-title">{{ store.header.title }}</h2>
 
             <div class="catalog__header-images">
-                <img :src="img" alt="" :class="`catalog__header-img img-${idx + 1}`" v-for="(img, idx) in store.images" :key="idx">
+                <img :src="img" alt="" :class="`catalog__header-img img-${idx + 1}`" v-for="(img, idx) in store.header.images" :key="idx">
             </div>
         </div>
     </div>
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import { cHeaderStore } from "@/stores/cHeaderStore.js";
+import { catalogStore } from "@/stores/catalogStore.js";
 
 export default {
     name: 'Catalog Header',
     data() {
         return {
-            store: cHeaderStore(),
+            store: catalogStore(),
         }
     }
 }

@@ -25,7 +25,7 @@
                     <i class="far fa-user"></i>
                 </button>
 
-                <button class="cart-btn nav-cltrs-btn">
+                <button class="cart-btn nav-cltrs-btn" @click="this.$router.push('/cart')">
                     <i class="fab fa-opencart"></i>
                 </button>
             </div>
