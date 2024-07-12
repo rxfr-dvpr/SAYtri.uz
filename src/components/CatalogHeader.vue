@@ -31,6 +31,7 @@ export default {
 .catalog__header {
     width: 100%;
     padding-top: 20px;
+    margin-bottom: 80px;
 
     .row {
         flex-direction: column;
