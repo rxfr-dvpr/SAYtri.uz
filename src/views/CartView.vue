@@ -12,15 +12,19 @@
     </div>
 
     <CartHeader/>
+
+    <OrderComponent/>
 </template>
 
 <script>
 import CartHeader from '@/components/CartHeader.vue';
+import OrderComponent from '@/components/OrderComponent.vue';
 
 export default {
     name: 'Cart Page',
     components: {
-        CartHeader
+        CartHeader,
+        OrderComponent
     }
 }
 

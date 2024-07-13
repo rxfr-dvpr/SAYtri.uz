@@ -81,10 +81,11 @@ button {
     }
 
     &:hover {
-        color: var(--main-white);
+        color: var(--main-white) !important;
+        border-color: var(--main-blue) !important;
         
         &::after {
-            width: 100%;
+            width: 100% !important;
         }
     }
 
@@ -96,10 +97,10 @@ button {
         }
 
         &:hover {
-            color: var(--main-blue);
+            color: var(--main-blue) !important;
 
             &::after {
-                width: 0;
+                width: 0 !important;
             }
         }
     }
