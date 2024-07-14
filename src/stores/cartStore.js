@@ -9,7 +9,29 @@ export const cartStore = defineStore('Cart Store', {
         order: {
             title: 'Оформление заказа',
             signIn: 'Войти',
-            signUp: 'Зарегистрироваться'
+            signUp: 'Зарегистрироваться',
+            form: {
+                inputs: [
+                    {
+                        type: 'text',
+                        value: '',
+                        name: 'name-inp',
+                        plcHdr: 'Ф.И.О'
+                    },
+                    {
+                        type: 'email',
+                        value: '',
+                        name: 'email-inp',
+                        plcHdr: 'Email'
+                    },
+                    {
+                        type: 'number',
+                        value: '',
+                        name: 'number-inp',
+                        plcHdr: 'Телефон'
+                    }
+                ]
+            }
         }
     })
 })

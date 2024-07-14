@@ -9,13 +9,20 @@
 
                 <button class="order-btn sign-out all-btn">{{ store.order.signUp }}</button>
             </div>
+
+            <form action="" @submit.prevent class="order-form">
+                <input :type="inp.type" :class="`order-form-inp ${inp.name}`" v-model="inp.value" 
+                v-for="(inp, idx) in store.order.form.inputs" :key="idx" required :placeholder="inp.plcHdr">
+
+                <span class="order-form-span">Доставка</span>
+            </form>
         </div>
     </div>
   </section>
 </template>
 
 <script>
-import { cartStore } from '@/stores/cartStore';
+import { cartStore } from '@/stores/cartStore.js';
 
 export default {
     name: 'Order Component',
@@ -59,6 +66,38 @@ export default {
                 left: unset;
                 right: 0;
             }
+        }
+    }
+
+    .order-form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 13px;
+        gap: 20px;
+
+        &-inp {
+            width: 49.1%;
+            border: solid 1px #C7C7C7;
+            background: transparent;
+            font-size: 16px;
+            padding: 25px 40px;
+            outline: none;
+
+            &::placeholder {
+                color: #B3ABAB;
+            }
+
+            &.name-inp {
+                width: 100%;
+            }
+        }
+
+        &-span {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            width: 100%;
         }
     }
 }
