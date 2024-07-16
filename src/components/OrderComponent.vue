@@ -15,6 +15,11 @@
                 v-for="(inp, idx) in store.order.form.inputs" :key="idx" required :placeholder="inp.plcHdr">
 
                 <span class="order-form-span">Доставка</span>
+
+                <div class="order-form-options">
+                    <span class="order-form-option active">Курьер</span>
+                    <span class="order-form-option">Пункт выдачи</span>
+                </div>
             </form>
         </div>
     </div>
@@ -98,6 +103,26 @@ export default {
             font-weight: 300;
             text-align: center;
             width: 100%;
+        }
+
+        &-options {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        &-option {
+            font-size: 15px;
+            color: #ADADAD;
+            cursor: pointer;
+
+            &.active {
+                font-weight: 600;
+                text-decoration: underline;
+                color: var(--main-dark);
+            }
         }
     }
 }
