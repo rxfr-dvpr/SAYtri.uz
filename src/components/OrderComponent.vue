@@ -20,6 +20,10 @@
                     <span class="order-form-option active">Курьер</span>
                     <span class="order-form-option">Пункт выдачи</span>
                 </div>
+
+                <div class="courier-form-inps">
+                    <input type="text">
+                </div>                
             </form>
         </div>
     </div>
