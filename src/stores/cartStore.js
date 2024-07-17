@@ -30,6 +30,45 @@ export const cartStore = defineStore('Cart Store', {
                         name: 'number-inp',
                         plcHdr: 'Телефон'
                     }
+                ],
+                courierInps: [
+                    {
+                        plcHdr: 'Город',
+                        type: 'text',
+                        class: 'city',
+                        val: ''
+                    },
+                    {
+                        plcHdr: 'Кв',
+                        type: 'text',
+                        class: 'flat',
+                        val: ''
+                    },
+                    {
+                        plcHdr: 'Улица',
+                        type: 'text',
+                        class: 'street',
+                        val: ''
+                    },
+                    {
+                        plcHdr: 'Подъезд, этаж',
+                        type: 'text',
+                        class: 'entrance',
+                        val: ''
+                    },
+                    {
+                        plcHdr: 'Дом, корп. / стр.',
+                        type: 'text',
+                        class: 'house',
+                        val: ''
+                    },
+                    {
+                        plcHdr: 'Комментарий для курьера',
+                        type: 'text',
+                        class: 'comment',
+                        val: ''
+                    },
+
                 ]
             }
         }

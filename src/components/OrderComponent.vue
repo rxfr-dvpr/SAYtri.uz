@@ -11,7 +11,7 @@
             </div>
 
             <form action="" @submit.prevent class="order-form">
-                <input :type="inp.type" :class="`order-form-inp ${inp.name}`" v-model="inp.value" 
+                <input :type="inp.type" :class="`order-form-inp all-inp ${inp.name}`" v-model="inp.value" 
                 v-for="(inp, idx) in store.order.form.inputs" :key="idx" required :placeholder="inp.plcHdr">
 
                 <span class="order-form-span">Доставка</span>
@@ -22,7 +22,8 @@
                 </div>
 
                 <div class="courier-form-inps">
-                    <input type="text">
+                    <input :type="inp.type" :class="`courier-form-inp all-inp ${inp.class}`" v-model="inp.value" 
+                    v-for="(inp, idx) in store.order.form.courierInps" :key="idx" required :placeholder="inp.plcHdr">
                 </div>                
             </form>
         </div>
@@ -86,17 +87,6 @@ export default {
         gap: 20px;
 
         &-inp {
-            width: 49.1%;
-            border: solid 1px #C7C7C7;
-            background: transparent;
-            font-size: 16px;
-            padding: 25px 40px;
-            outline: none;
-
-            &::placeholder {
-                color: #B3ABAB;
-            }
-
             &.name-inp {
                 width: 100%;
             }
@@ -127,6 +117,18 @@ export default {
                 text-decoration: underline;
                 color: var(--main-dark);
             }
+        }
+    }
+
+    .courier-form-inps {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 14px;
+        column-gap: 20px;
+
+        .courier-form-inp {
+            width: 100%;
         }
     }
 }

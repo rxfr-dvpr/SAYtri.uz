@@ -131,3 +131,17 @@ button {
         color: #2b2b2b;
     }
 }
+
+
+.all-inp {
+    width: 49.1%;
+    border: solid 1px #C7C7C7;
+    background: transparent;
+    font-size: 16px;
+    padding: 25px 40px;
+    outline: none;
+
+    &::placeholder {
+        color: #B3ABAB;
+    }
+}
