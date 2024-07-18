@@ -25,6 +25,8 @@
                     <input :type="inp.type" :class="`courier-form-inp all-inp ${inp.class}`" v-model="inp.value" 
                     v-for="(inp, idx) in store.order.form.courierInps" :key="idx" required :placeholder="inp.plcHdr">
                 </div>                
+
+                <button class="order-form-btn all-btn dark">К оплате</button>
             </form>
         </div>
     </div>
@@ -83,8 +85,8 @@ export default {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        row-gap: 13px;
-        gap: 20px;
+        row-gap: 30px;
+        column-gap: 20px;
 
         &-inp {
             &.name-inp {
@@ -93,9 +95,9 @@ export default {
         }
 
         &-span {
-            font-size: 20px;
-            font-weight: 300;
+            font-size: 25px;
             text-align: center;
+            text-decoration: underline;
             width: 100%;
         }
 
@@ -130,6 +132,13 @@ export default {
         .courier-form-inp {
             width: 100%;
         }
+    }
+
+    .order-form-btn {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
     }
 }
 
